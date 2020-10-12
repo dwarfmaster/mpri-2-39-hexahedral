@@ -9,4 +9,8 @@
 *.pdf
 *.snm
 *.toc
+*.vrb
+*.ppm
+*.pgm
+.auctex*
 
