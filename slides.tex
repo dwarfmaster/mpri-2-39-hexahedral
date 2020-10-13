@@ -621,6 +621,14 @@
   \end{tikzpicture}\end{center}
 \end{frame}
 
+\begin{frame}
+  \frametitle{Circular base component}
+
+  \begin{center}
+    \includegraphics[height=0.8\textheight]{./images/circular-base.png}
+  \end{center}
+\end{frame}
+
 \begin{frame}[fragile]
   \frametitle{Real example 1}
   \begin{columns}
@@ -652,8 +660,78 @@
   \end{center}
 \end{frame}
 
-\section{Implementation}
+\section{Visualisation}
 
-\section{Results}
+% TODO
+
+\section{Selection}
+
+\begin{frame}
+  \frametitle{Sheet complexity}
+  \begin{center}
+    \includegraphics[height=0.8\textheight]{./images/self-intersect.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Sheets interactions}
+  \begin{columns}
+    \begin{column}{0.3\textwidth}
+      \includegraphics[width=\textwidth]{./images/sheet-intersect.png}
+      \begin{center}Intersecting\end{center}
+    \end{column}
+    \begin{column}{0.3\textwidth}
+      \includegraphics[width=\textwidth]{./images/sheet-adjacent.png}
+      \begin{center}Adjacent\end{center}
+    \end{column}
+    \begin{column}{0.3\textwidth}
+      \includegraphics[width=\textwidth]{./images/sheet-hybrid.png}
+      \begin{center}Hybrid\end{center}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Sheet covering selection}
+
+  \begin{itemize}
+    \item Cover all base complexes
+    \item Minimize the intersection of sheets
+    \item Maximize individual sheet complexity
+  \end{itemize}
+
+  \begin{block}{Remark}
+    This is a special case of the set cover problem.
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Sheet interaction matrix}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{center}
+        \includegraphics[height=\textwidth]{./images/interaction.png}
+      \end{center}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \includegraphics[width=\textwidth]{./images/matrix.png}
+    \end{column}
+  \end{columns}
+  \begin{block}{Complexity measure}\begin{equation*}
+      \sqrt{\text{trace}(M^TM)}
+  \end{equation*}\end{block}
+\end{frame}
+
+\section{Conclusion}
+
+\begin{frame}
+  \frametitle{Complete analysis}
+  \includegraphics[width=\textwidth]{./images/complete.png}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Hybrid representation}
+  \includegraphics[width=\textwidth]{./images/hybrid.png}
+\end{frame}
 
 \end{document}
